@@ -1,0 +1,19 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        int evenDigitsVar = 0;
+        for(int i:nums){
+            if((countDigits(i))%2==0){
+                evenDigitsVar++;
+            }
+        }
+        return evenDigitsVar;
+    }
+    public int countDigits(int n){
+        int count = 0;
+        while(n>0){
+            n/=10;
+            count++;
+        }
+        return count;
+    }
+}
